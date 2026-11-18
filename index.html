@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>花札 こいこい | 広告に中断されない、クラシックでシンプルな花札アプリ</title>
+<meta name="description" content="1910年発行の図版の札で遊ぶ、クラシックでシンプルな花札こいこい。CPUとの全6局・合計点勝負、勝つと増える季節の飾りは全47点。広告動画に中断されず、オフラインでも遊べる無料アプリです。">
+<link rel="canonical" href="https://ymhrk719.github.io/hanafuda-koikoi/">
+<meta property="og:title" content="花札 こいこい | 広告に中断されない、クラシックでシンプルな花札アプリ">
+<meta property="og:description" content="1910年発行の図版の札で遊ぶ、クラシックでシンプルな花札こいこい。CPUとの全6局・合計点勝負、勝つと増える季節の飾りは全47点。広告動画に中断されず、オフラインでも遊べる無料アプリです。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ymhrk719.github.io/hanafuda-koikoi/">
+<meta property="og:image" content="img/shot-match.jpg">
+<link rel="icon" type="image/jpeg" href="img/icon.jpg">
+<style>
+  :root{
+    --bg:#0b1512;
+    --felt:#123324;
+    --felt-deep:#0d271b;
+    --cream:#f2ead8;
+    --cream-dim:#cfc5ab;
+    --gold:#c9a227;
+    --gold-dim:rgba(201,162,39,.45);
+    --line:rgba(242,234,216,.16);
+  }
+  *{box-sizing:border-box;}
+  html{margin:0;padding:0;}
+  body{
+    margin:0;padding:0;
+    background:var(--bg);
+    color:var(--cream);
+    font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px;}
+  h1,h2{font-weight:600;letter-spacing:.06em;}
+  h2{
+    font-size:1.45rem;text-align:center;margin:0 0 1.2em;
+  }
+  h2::after{
+    content:"";display:block;width:56px;height:1px;
+    background:var(--gold);margin:.55em auto 0;opacity:.8;
+  }
+  section{padding:56px 0 8px;}
+  p{margin:0 0 1em;}
+
+  /* ---------- hero ---------- */
+  header.hero{
+    text-align:center;
+    padding:72px 0 56px;
+    background:radial-gradient(120% 130% at 50% 0%, #1a6b3c 0%, var(--felt) 46%, var(--felt-deep) 82%, var(--bg) 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .icon{
+    width:148px;height:148px;border-radius:32px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5), 0 0 0 1px var(--gold-dim);
+  }
+  .hero h1{font-size:2.5rem;margin:.45em 0 .1em;letter-spacing:.14em;}
+  .hero .tagline{
+    color:var(--cream-dim);font-size:1.02rem;margin:0 auto 2em;max-width:34em;
+  }
+  .hero .tagline strong{color:var(--cream);font-weight:600;}
+  .stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .store-btn{
+    display:inline-block;min-width:250px;
+    padding:13px 26px;border-radius:10px;
+    font-size:1rem;letter-spacing:.04em;text-decoration:none;
+  }
+  .store-btn.appstore{
+    background:var(--cream);color:#14231c;font-weight:700;
+    box-shadow:0 4px 14px rgba(0,0,0,.35);
+  }
+  .store-btn.appstore:hover{background:#fff;}
+  .store-btn.play{
+    border:1px solid var(--line);color:var(--cream-dim);
+    background:rgba(242,234,216,.04);cursor:default;
+  }
+  .hero .note{margin-top:1.1em;font-size:.85rem;color:var(--cream-dim);}
+
+  /* ---------- features ---------- */
+  .features{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .features li{
+    border:1px solid var(--line);border-radius:10px;
+    background:rgba(242,234,216,.03);
+    padding:18px 20px;
+  }
+  .features h3{
+    margin:0 0 .35em;font-size:1.02rem;font-weight:600;color:var(--cream);
+  }
+  .features h3::before{content:"― ";color:var(--gold);}
+  .features p{margin:0;font-size:.92rem;color:var(--cream-dim);line-height:1.75;}
+
+  /* ---------- screenshots ---------- */
+  .shots{
+    display:flex;gap:16px;overflow-x:auto;padding:6px 2px 18px;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  }
+  .shots figure{
+    margin:0;flex:0 0 auto;width:min(250px,68vw);scroll-snap-align:start;
+  }
+  .shots img{
+    width:100%;height:auto;display:block;border-radius:12px;
+    border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.4);
+  }
+  .shots figcaption{
+    text-align:center;font-size:.88rem;color:var(--cream-dim);margin-top:.6em;
+  }
+
+  /* ---------- about ---------- */
+  .about p{max-width:44em;margin-left:auto;margin-right:auto;}
+  .yaku{
+    list-style:none;margin:1.4em auto 0;padding:0;max-width:44em;
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:center;
+  }
+  .yaku li{
+    border:1px solid var(--gold-dim);border-radius:999px;
+    padding:4px 16px;font-size:.92rem;color:var(--cream);
+    background:rgba(201,162,39,.07);
+  }
+  .notes{
+    max-width:44em;margin:0 auto;padding-left:1.4em;
+    line-height:1.9;text-align:left;
+  }
+  .notes li{margin:.35em 0;}
+  .notes li::marker{color:var(--gold);}
+
+  /* ---------- footer ---------- */
+  footer{
+    margin-top:64px;padding:30px 0 40px;text-align:center;
+    border-top:1px solid var(--line);
+    font-size:.88rem;color:var(--cream-dim);
+  }
+  footer a{color:var(--cream-dim);text-underline-offset:3px;}
+  footer a:hover{color:var(--cream);}
+  footer .copy{margin-top:.8em;}
+
+  @media (max-width:640px){
+    .hero h1{font-size:2rem;}
+    header.hero{padding:52px 0 44px;}
+    .hero .icon{width:118px;height:118px;border-radius:26px;}
+    .features{grid-template-columns:1fr;}
+    section{padding:44px 0 4px;}
+    .store-btn{min-width:0;width:100%;max-width:320px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="icon" src="img/icon.jpg" alt="花札 こいこい のアプリアイコン（松に鶴）" width="512" height="512">
+    <h1>花札 こいこい</h1>
+    <p class="tagline">
+      <strong>広告動画に中断されない</strong>、クラシックでシンプルな花札。<br>
+      1910年の図版で遊ぶ、本格こいこいです。
+    </p>
+    <div class="stores">
+      <a class="store-btn appstore" href="https://apps.apple.com/jp/app/%E8%8A%B1%E6%9C%AD-%E3%81%93%E3%81%84%E3%81%93%E3%81%84/id6835905856">App Storeで入手（無料・iPhone）</a>
+      <span class="store-btn play" aria-disabled="true">Google Play版は準備中</span>
+    </div>
+    <p class="note">無料 / アプリ内課金なし / アカウント登録不要</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="features-h">
+    <h2 id="features-h">特徴</h2>
+    <ul class="features">
+      <li>
+        <h3>対局を中断する広告なし</h3>
+        <p>動画広告で対局が止まることはありません。表示されるのは画面下部のバナー広告のみです。</p>
+      </li>
+      <li>
+        <h3>1910年の図版の札</h3>
+        <p>札の絵柄は、1910年（明治43年）発行の図版をもとにしています。昔ながらの花札の絵をそのままに遊べます。</p>
+      </li>
+      <li>
+        <h3>CPUと全6局の勝負</h3>
+        <p>CPUとの対戦は全6局、合計点を競います。難易度も選べるので、初めての方から慣れた方までどうぞ。</p>
+      </li>
+      <li>
+        <h3>季節の飾り 全47点</h3>
+        <p>勝つと床の間に季節の飾りが増えていきます。全47点のコレクションを、少しずつ集める楽しみがあります。</p>
+      </li>
+      <li>
+        <h3>オフラインで遊べる</h3>
+        <p>対局は通信なしで遊べます。移動中や電波の届かない場所でも、そのまま続けられます。</p>
+      </li>
+      <li>
+        <h3>登録不要・課金なし</h3>
+        <p>アカウント登録は不要で、アプリ内課金もありません。開いてすぐに遊べます。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <h2 id="shots-h">スクリーンショット</h2>
+    <div class="shots">
+      <figure>
+        <img src="img/shot-match.jpg" alt="床の間に集めた飾りが並ぶ花札 こいこいの対局画面" width="640" height="1138" loading="lazy">
+        <figcaption>対局画面</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-result.jpg" alt="役ができて「こいこい」か「あがり」を選ぶ画面" width="640" height="1138" loading="lazy">
+        <figcaption>役ができたら「こいこい」か「あがり」か</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-tokonoma.jpg" alt="集めた季節の飾りが並ぶ飾り棚の画面" width="640" height="1138" loading="lazy">
+        <figcaption>勝つと増える季節の飾り</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-encyclopedia.jpg" alt="札の図鑑の画面" width="640" height="1138" loading="lazy">
+        <figcaption>札の図鑑</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-howto.jpg" alt="遊び方の説明画面" width="640" height="1195" loading="lazy">
+        <figcaption>遊び方</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="about" aria-labelledby="about-h">
+    <h2 id="about-h">こいこいとは</h2>
+    <p>
+      こいこいは、花札の代表的な遊び方です。手札と場札のうち、同じ月の札同士を合わせて取り合い、
+      取った札で「役」を作って得点を競います。1局ごとに先に役を作った方が勝ちですが、
+      そこで「あがり」にせず「こいこい」と続行して、さらに大きな得点を狙うこともできます。
+    </p>
+    <p>
+      続ければ点は伸びますが、相手に先に役を作られると負けになることもある。
+      その駆け引きが、こいこいの一番の面白さです。本アプリでは、CPUとの全6局の合計点で勝負します。
+    </p>
+    <ul class="yaku">
+      <li>月見で一杯</li>
+      <li>花見で一杯</li>
+      <li>猪鹿蝶</li>
+      <li>赤短・青短</li>
+    </ul>
+  </section>
+
+  <section class="trivia" aria-labelledby="trivia-h">
+    <h2 id="trivia-h">花札にまつわる話</h2>
+    <ul class="notes">
+      <li>映画『サマーウォーズ』（2009年）のクライマックスでは、こいこいでの対決が描かれました。</li>
+      <li>任天堂は1889年に花札の製造で創業した会社で、宇治のニンテンドーミュージアムでは花札づくりの体験もできます。</li>
+      <li>『鬼滅の刃』では主人公の耳飾りが花札の絵柄をモチーフにしており、花札のデザインが若い世代にも広く知られました。</li>
+      <li>ゲーム『龍が如く』シリーズでは、こいこいがミニゲームとして収録されています。</li>
+      <li>家族や親戚が集まるお正月の遊びとしても、長く親しまれてきました。</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="privacy-policy.html">プライバシーポリシー</a>
+    <p class="copy">© 2026 Tomohiro Ohno</p>
+  </div>
+</footer>
+
+</body>
+</html>
