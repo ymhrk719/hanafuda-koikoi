@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ymhrk719.github.io/hanafuda-koikoi/sitemap.xml
