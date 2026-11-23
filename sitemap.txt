@@ -2,3 +2,6 @@ https://ymhrk719.github.io/hanafuda-koikoi/
 https://ymhrk719.github.io/hanafuda-koikoi/privacy-policy.html
 https://ymhrk719.github.io/hanafuda-koikoi/howto.html
 https://ymhrk719.github.io/hanafuda-koikoi/yaku.html
+https://ymhrk719.github.io/hanafuda-koikoi/en/
+https://ymhrk719.github.io/hanafuda-koikoi/en/howto.html
+https://ymhrk719.github.io/hanafuda-koikoi/en/yaku.html

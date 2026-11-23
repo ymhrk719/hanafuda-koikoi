@@ -7,6 +7,9 @@
 <title>花札 こいこい | 無料で遊べる、広告に中断されないクラシックな花札アプリ</title>
 <meta name="description" content="無料で遊べる本格こいこいアプリ。広告動画に中断されず、1910年発行の図版の札で遊べます。CPUとの全6局・合計点勝負、勝つと増える季節の飾りは全47点。オフライン対応、登録不要、課金なし。">
 <link rel="canonical" href="https://ymhrk719.github.io/hanafuda-koikoi/">
+<link rel="alternate" hreflang="ja" href="https://ymhrk719.github.io/hanafuda-koikoi/">
+<link rel="alternate" hreflang="en" href="https://ymhrk719.github.io/hanafuda-koikoi/en/">
+<link rel="alternate" hreflang="x-default" href="https://ymhrk719.github.io/hanafuda-koikoi/">
 <link rel="icon" type="image/png" sizes="64x64" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta property="og:title" content="花札 こいこい | 無料で遊べる、広告に中断されないクラシックな花札アプリ">
@@ -78,6 +81,7 @@
   }
   .store-btn.appstore:hover{background:#fff;}
   .store-btn.play{
+    height:54px;display:inline-flex;align-items:center;justify-content:center;padding:0 26px;
     border:1px solid var(--line);color:var(--cream-dim);
     background:rgba(242,234,216,.04);cursor:default;
   }
@@ -155,6 +159,11 @@
     section{padding:44px 0 4px;}
     .store-btn{min-width:0;width:100%;max-width:320px;}
   }
+
+  .stores{align-items:center;}
+  .store-badge{height:54px;width:auto;display:block;}
+  .badge-link{display:inline-block;}
+  .badge-link:hover{opacity:.88;}
 </style>
 </head>
 <body>
@@ -168,7 +177,7 @@
       1910年の図版で遊ぶ、本格こいこいです。
     </p>
     <div class="stores">
-      <a class="store-btn appstore" href="https://apps.apple.com/jp/app/%E8%8A%B1%E6%9C%AD-%E3%81%93%E3%81%84%E3%81%93%E3%81%84/id6835905856">App Storeで入手（無料・iPhone）</a>
+      <a class="badge-link" href="https://apps.apple.com/jp/app/%E8%8A%B1%E6%9C%AD-%E3%81%93%E3%81%84%E3%81%93%E3%81%84/id6835905856"><img class="store-badge" src="img/badge-appstore-ja.svg" alt="App Storeからダウンロード" width="147" height="54"></a>
       <span class="store-btn play" aria-disabled="true">Google Play版は準備中</span>
     </div>
     <p class="note">無料 / アプリ内課金なし / アカウント登録不要</p>
@@ -228,8 +237,8 @@
         <figcaption>札の図鑑</figcaption>
       </figure>
       <figure>
-        <img src="img/shot-howto.jpg" alt="遊び方の説明画面" width="640" height="1195" loading="lazy">
-        <figcaption>遊び方</figcaption>
+        <img src="img/shot-howto.jpg" alt="札の図鑑の詳細画面（紅葉に鹿）" width="640" height="1195" loading="lazy">
+        <figcaption>札の解説（図鑑）</figcaption>
       </figure>
     </div>
   </section>
@@ -286,7 +295,7 @@
 
 <footer>
   <div class="wrap">
-    <a href="howto.html">遊び方</a> ・ <a href="yaku.html">役一覧</a> ・ <a href="privacy-policy.html">プライバシーポリシー</a>
+    <a href="howto.html">遊び方</a> ・ <a href="yaku.html">役一覧</a> ・ <a href="privacy-policy.html">プライバシーポリシー</a> ・ <a href="en/index.html">English</a>
     <p class="copy">© 2026 Tomohiro Ohno</p>
   </div>
 </footer>

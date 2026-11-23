@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hanafuda Koi-Koi | A Classic Hanafuda App — Free, with No Ad Videos Interrupting Your Matches</title>
+<meta name="description" content="Play authentic Koi-Koi, free. No ad videos interrupt your matches, and the cards use artwork from a plate published in 1910. Six-round matches against the CPU decided on total points, 47 seasonal decorations to collect, offline play, no sign-up, no in-app purchases.">
+<link rel="canonical" href="https://ymhrk719.github.io/hanafuda-koikoi/en/">
+<link rel="alternate" hreflang="ja" href="https://ymhrk719.github.io/hanafuda-koikoi/">
+<link rel="alternate" hreflang="en" href="https://ymhrk719.github.io/hanafuda-koikoi/en/">
+<link rel="alternate" hreflang="x-default" href="https://ymhrk719.github.io/hanafuda-koikoi/">
+<link rel="icon" type="image/png" sizes="64x64" href="../img/favicon.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta property="og:title" content="Hanafuda Koi-Koi | A Classic Hanafuda App — Free, with No Ad Videos Interrupting Your Matches">
+<meta property="og:description" content="Play authentic Koi-Koi, free. No ad videos interrupt your matches, and the cards use artwork from a plate published in 1910. Six-round matches against the CPU decided on total points, 47 seasonal decorations to collect, offline play, no sign-up, no in-app purchases.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Hanafuda Koi-Koi","url":"https://ymhrk719.github.io/hanafuda-koikoi/en/"}
+</script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ymhrk719.github.io/hanafuda-koikoi/en/">
+<meta property="og:image" content="img/shot-match.jpg">
+<style>
+  :root{
+    --bg:#0b1512;
+    --felt:#123324;
+    --felt-deep:#0d271b;
+    --cream:#f2ead8;
+    --cream-dim:#cfc5ab;
+    --gold:#c9a227;
+    --gold-dim:rgba(201,162,39,.45);
+    --line:rgba(242,234,216,.16);
+  }
+  *{box-sizing:border-box;}
+  html{margin:0;padding:0;}
+  body{
+    margin:0;padding:0;
+    background:var(--bg);
+    color:var(--cream);
+    font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px;}
+  h1,h2{font-weight:600;letter-spacing:.06em;}
+  h2{
+    font-size:1.45rem;text-align:center;margin:0 0 1.2em;
+  }
+  h2::after{
+    content:"";display:block;width:56px;height:1px;
+    background:var(--gold);margin:.55em auto 0;opacity:.8;
+  }
+  section{padding:56px 0 8px;}
+  p{margin:0 0 1em;}
+
+  /* ---------- hero ---------- */
+  header.hero{
+    text-align:center;
+    padding:72px 0 56px;
+    background:radial-gradient(120% 130% at 50% 0%, #1a6b3c 0%, var(--felt) 46%, var(--felt-deep) 82%, var(--bg) 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .icon{
+    width:148px;height:148px;border-radius:32px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5), 0 0 0 1px var(--gold-dim);
+  }
+  .hero h1{font-size:2.5rem;margin:.45em 0 .1em;letter-spacing:.14em;}
+  .hero .tagline{
+    color:var(--cream-dim);font-size:1.02rem;margin:0 auto 2em;max-width:34em;
+  }
+  .hero .tagline strong{color:var(--cream);font-weight:600;}
+  .stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .store-btn{
+    display:inline-block;min-width:250px;
+    padding:13px 26px;border-radius:10px;
+    font-size:1rem;letter-spacing:.04em;text-decoration:none;
+  }
+  .store-btn.appstore{
+    background:var(--cream);color:#14231c;font-weight:700;
+    box-shadow:0 4px 14px rgba(0,0,0,.35);
+  }
+  .store-btn.appstore:hover{background:#fff;}
+  .store-btn.play{
+    height:54px;display:inline-flex;align-items:center;justify-content:center;padding:0 26px;
+    border:1px solid var(--line);color:var(--cream-dim);
+    background:rgba(242,234,216,.04);cursor:default;
+  }
+  .hero .note{margin-top:1.1em;font-size:.85rem;color:var(--cream-dim);}
+  .hero .hero-shot{
+    display:block;margin:30px auto 0;width:min(380px,84vw);height:auto;
+    border-radius:16px;border:1px solid rgba(201,162,39,.35);
+    box-shadow:0 18px 44px rgba(0,0,0,.5);
+  }
+
+  /* ---------- features ---------- */
+  .features{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .features li{
+    border:1px solid var(--line);border-radius:10px;
+    background:rgba(242,234,216,.03);
+    padding:18px 20px;
+  }
+  .features h3{
+    margin:0 0 .35em;font-size:1.02rem;font-weight:600;color:var(--cream);
+  }
+  .features h3::before{content:"― ";color:var(--gold);}
+  .features p{margin:0;font-size:.92rem;color:var(--cream-dim);line-height:1.75;}
+  .features a.card-link{display:block;text-decoration:none;color:inherit;}
+  .features a.card-link:hover h3{color:var(--gold);}
+
+  /* ---------- screenshots ---------- */
+  .shots{
+    display:flex;gap:16px;overflow-x:auto;padding:6px 2px 18px;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  }
+  .shots figure{
+    margin:0;flex:0 0 auto;width:min(250px,68vw);scroll-snap-align:start;
+  }
+  .shots img{
+    width:100%;height:auto;display:block;border-radius:12px;
+    border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.4);
+  }
+  .shots figcaption{
+    text-align:center;font-size:.88rem;color:var(--cream-dim);margin-top:.6em;
+  }
+
+  /* ---------- about ---------- */
+  .about p{max-width:44em;margin-left:auto;margin-right:auto;}
+  .yaku{
+    list-style:none;margin:1.4em auto 0;padding:0;max-width:44em;
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:center;
+  }
+  .yaku li{
+    border:1px solid var(--gold-dim);border-radius:999px;
+    padding:4px 16px;font-size:.92rem;color:var(--cream);
+    background:rgba(201,162,39,.07);
+  }
+  .notes{
+    max-width:44em;margin:0 auto;padding-left:1.4em;
+    line-height:1.9;text-align:left;
+  }
+  .notes li{margin:.35em 0;}
+  .notes li::marker{color:var(--gold);}
+
+  /* ---------- footer ---------- */
+  footer{
+    margin-top:64px;padding:30px 0 40px;text-align:center;
+    border-top:1px solid var(--line);
+    font-size:.88rem;color:var(--cream-dim);
+  }
+  footer a{color:var(--cream-dim);text-underline-offset:3px;}
+  footer a:hover{color:var(--cream);}
+  footer .copy{margin-top:.8em;}
+
+  @media (max-width:640px){
+    .hero h1{font-size:2rem;}
+    header.hero{padding:52px 0 44px;}
+    .hero .icon{width:118px;height:118px;border-radius:26px;}
+    .features{grid-template-columns:1fr;}
+    section{padding:44px 0 4px;}
+    .store-btn{min-width:0;width:100%;max-width:320px;}
+  }
+
+  .stores{align-items:center;}
+  .store-badge{height:54px;width:auto;display:block;}
+  .badge-link{display:inline-block;}
+  .badge-link:hover{opacity:.88;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="icon" src="../img/icon.jpg" alt="Hanafuda Koi-Koi app icon (crane on pine)" width="512" height="512">
+    <h1>Hanafuda Koi-Koi</h1>
+    <p class="tagline">
+      <strong>No long ad breaks! Koi-Koi that never stops your next match.</strong><br>
+      Classic Koi-Koi, played with card art from a 1910 plate.
+    </p>
+    <div class="stores">
+      <a class="badge-link" href="https://apps.apple.com/app/id6835905856"><img class="store-badge" src="../img/badge-appstore-en.svg" alt="Download on the App Store" width="147" height="54"></a>
+      <span class="store-btn play" aria-disabled="true">Google Play version coming soon</span>
+    </div>
+    <p class="note">Free / No in-app purchases / No account needed</p>
+    <img class="hero-shot" src="img/shot-match.jpg" alt="A Koi-Koi match in progress against the CPU" width="640" height="1391">
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="features-h">
+    <h2 id="features-h">Features</h2>
+    <ul class="features">
+      <li>
+        <h3>No ads interrupting your matches</h3>
+        <p>No ad videos interrupt your matches. The only ads shown are banners at the bottom of the screen.</p>
+      </li>
+      <li>
+        <h3>Card art from a 1910 plate</h3>
+        <p>The card faces are based on an illustrated plate published in 1910. Play with the classic hanafuda artwork, just as it was.</p>
+      </li>
+      <li>
+        <h3>Six-round matches against the CPU</h3>
+        <p>Matches against the CPU run six rounds, decided on total points. With selectable difficulty, everyone from first-timers to seasoned players can enjoy the game.</p>
+      </li>
+      <li>
+        <h3>47 seasonal decorations</h3>
+        <p>Win matches and seasonal decorations gather in your tokonoma alcove. There is a quiet pleasure in collecting all 47, a few at a time.</p>
+      </li>
+      <li>
+        <h3>Play offline</h3>
+        <p>Matches play with no connection at all. Keep going on the move, or wherever the signal cannot reach.</p>
+      </li>
+      <li>
+        <h3>No sign-up, no in-app purchases</h3>
+        <p>No account registration, and no in-app purchases. Open the app and play right away.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <h2 id="shots-h">Screenshots</h2>
+    <div class="shots">
+      <figure>
+        <img src="img/shot-title.jpg" alt="The Hanafuda Koi-Koi title screen" width="640" height="1391" loading="lazy">
+        <figcaption>Title screen</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-match.jpg" alt="A Koi-Koi match in progress" width="640" height="1391" loading="lazy">
+        <figcaption>In a match</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-result.jpg" alt="The round result screen — you win the round" width="640" height="1391" loading="lazy">
+        <figcaption>Winning a round</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-detail.jpg" alt="Card guide detail screen — Deer and Maple" width="640" height="1391" loading="lazy">
+        <figcaption>Card guide: notes on every card</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-howto.jpg" alt="The How to play screen, explained with diagrams" width="640" height="1391" loading="lazy">
+        <figcaption>How to play, in diagrams</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="about" aria-labelledby="about-h">
+    <h2 id="about-h">What is Koi-Koi?</h2>
+    <p>
+      Koi-Koi is the best-known game played with hanafuda cards. You match cards in your hand with
+      field cards of the same month to capture them, and build scoring combinations — yaku — from
+      the cards you take. The first to complete a yaku wins the round — but instead of stopping
+      there with “agari”, you can call “koi-koi” and play on, aiming for an even bigger score.
+    </p>
+    <p>
+      Push on and your score can grow — but if your opponent completes a yaku first, you lose the
+      round. That push-and-pull is the heart of Koi-Koi. In this app, matches against the CPU run
+      six rounds, decided on total points.
+    </p>
+    <ul class="yaku">
+      <li>Moon Viewing (Tsukimi de Ippai)</li>
+      <li>Flower Viewing (Hanami de Ippai)</li>
+      <li>Boar, Deer &amp; Butterfly (Ino-Shika-Chō)</li>
+      <li>Red &amp; Blue Ribbons (Akatan · Aotan)</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="guide-h">
+    <h2 id="guide-h">How to Play &amp; the Yaku</h2>
+    <ul class="features">
+      <li>
+        <a class="card-link" href="howto.html">
+          <h3>How to play Koi-Koi</h3>
+          <p>The flow of a match, explained with diagrams — terms such as basan, hikofuda and teshi, how scoring works, and how redeals are handled.</p>
+        </a>
+      </li>
+      <li>
+        <a class="card-link" href="yaku.html">
+          <h3>Yaku list &amp; points table</h3>
+          <p>All 12 yaku — Five Brights, Rainy Four Brights, Boar, Deer &amp; Butterfly, Red Ribbons, Blue Ribbons and more — with their points and pictures of the cards that make them.</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="trivia" aria-labelledby="trivia-h">
+    <h2 id="trivia-h">Hanafuda Stories</h2>
+    <ul class="notes">
+      <li>In the film Summer Wars (2009), the climax turns on a match of Koi-Koi.</li>
+      <li>Nintendo was founded in 1889 making hanafuda cards, and at the Nintendo Museum in Uji you can try making hanafuda yourself.</li>
+      <li>In Demon Slayer, the hero's earrings are modeled on hanafuda designs, bringing the card art to a younger generation.</li>
+      <li>The Like a Dragon (Yakuza) series features Koi-Koi as a playable minigame.</li>
+      <li>Hanafuda has long been a New Year pastime, played when family and relatives gather.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="howto.html">How to play</a> · <a href="yaku.html">Yaku list</a> · <a href="../privacy-policy.html">Privacy Policy</a> · <a href="../index.html">日本語</a>
+    <p class="copy">© 2026 Tomohiro Ohno</p>
+  </div>
+</footer>
+
+</body>
+</html>
